@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style/style.css">
+    <link rel="icon" type="image/x-icon" href="./static/images/favicon.png">
+    <title>TODO</title>
+</head>
+
+<body>
+    <div id="app-bar">
+        <h2 style="margin: auto 10px 0; font-size: 40px;">TODO APP ONLINE</h2>
+        <div class="butons-container">
+            <div id="logout-container" style="display:none">
+                <button onclick="logout()" style="width:auto;">Log Out</button>
+            </div>
+            <div id="account-container" style="display:none">
+                <div id="account-name" style="width:auto;">Account Name</div>
+            </div>
+            <div id="login-container" style="display:inline-block">
+                <!-- <h2>Modal Login Form</h2> -->
+
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log
+                    In</button>
+
+                <div id="id01" class="modal">
+
+                    <form class="modal-content animate-zoom" action="" method="">
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input class="uname-input" type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input class="psw-input" type="password" placeholder="Enter Password" name="psw" required>
+
+                            <a href="#todo-container">
+                                <button type="button"
+                                    onclick="login()">Login</button>
+                            </a>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none';"
+                                class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div id="signup-container" style="display:inline-block">
+
+                <!-- <h2>Modal Signup Form</h2> -->
+
+                <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign
+                    Up</button>
+
+                <div id="id02" class="modal">
+
+                    <form class="modal-content animate-zoom" action="" method="">
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input class="uname-input" type="text" placeholder="Enter Username" name="uname" required>
+
+                            <label for="email"><b>Email</b></label>
+                            <input class="email-input" type="email" placeholder="Enter Email" name="email" required>
+
+                            <label for="psw"><b>Password</b></label>
+                            <input class="psw-input" type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="button"
+                                onclick="signup()">Submit</button>
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                                class="cancelbtn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert animate-slide" style="display:none">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Warning!</strong><span class="message">Indicates a dangerous or potentially negative action.</span>
+    </div>
+
+    <div id="todo-container">
+        <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+        </ul>
+    </div>
+
+
+    <script src="./static/script/todo.js"></script>
+</body>
+
+</html>
