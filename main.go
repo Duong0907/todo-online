@@ -1,9 +1,10 @@
 package main
 
 import (
+	"fmt"
+	"todo-online-api/pkgs/auth"
 	"todo-online-api/pkgs/middleware"
 	"todo-online-api/routes"
-	"todo-online-api/pkgs/auth"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload"
@@ -34,5 +35,5 @@ func main() {
 	routes.RouteTodo(api)
 	routes.RouteUser(api)
 
-	router.Run("localhost:8080")
+	router.Run(":8080")
 }

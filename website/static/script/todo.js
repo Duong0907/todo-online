@@ -151,7 +151,7 @@ const myInput = document.querySelector('#todo-container #myInput');
 const myUL = document.querySelector('#todo-container #myUL');
 
 
-var rootApi = `http://localhost:8080/api/`
+var rootApi = `${window.location}/api/`
 
 // Interacting data in database functions
 function getDataFromDB(endpoint) {
